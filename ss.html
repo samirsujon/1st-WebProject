@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .fullweb{
+            font-family: 'Open Sans', sans-serif;
+        }
+        .container{
+            width: 1170px;
+            height: auto;
+            margin: auto;
+        }
+        /* headder */
+        .headder{
+            padding: 30px 0;
+            display: flex;
+            align-items:center ;
+            justify-content: space-between;
+        }
+        .container .headder .logo{
+            font-family: 'Lobster', cursive;
+            color: #44c0c2;
+        }
+        .container .headder .logo h1{
+            display: inline-block;
+        }
+        .container .menu{
+            display: inline-block;
+        }
+        .container .menu ul{
+            display: flex;
+
+        }
+        .container .menu ul li{
+            list-style: none;
+        }
+        .container .menu ul li a{
+            text-decoration: none;
+            padding: 8px 12px;
+            position: relative;
+        }
+        .container .menu ul li a::after{
+            position: absolute;
+            content: "";
+            height: 3px;
+            width: 0;
+            background-color: aqua;
+            left: 0;
+            bottom: -8px;
+        }
+        .container .menu ul li a:hover{
+            background-color: #f8f9fb;
+            border-radius: 5px;
+        }
+        .container .menu ul li a:hover:after{
+            width: 100%;
+            transition: 0.6s;
+        }
+        /* banner */
+        .banner{
+            background-image: url(./png.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 570px;
+        }
+        .text{
+            text-align: center;
+            padding-top: 140px;
+        }
+        .banner .container .text h1{
+            text-align: center;
+            font-size: 63px;
+            color: azure;
+        }
+        .banner .container .text p{
+            padding: 40px 310px;
+            box-sizing: border-box;
+            color: azure;
+            font-size: 23px;
+        }
+        .banner .container .text button{
+            border: 2px solid white;
+            padding: 25px 45px;
+            border-radius: 5px;
+            background: transparent;
+        }
+        .banner .container .text button:hover{
+            background-color: #67d4d5;
+            color: beige;
+        }
+        .banner .container .text button a{
+            text-decoration: none;
+            color: azure;
+            font-size: 26px;
+        }
+        .vlog{
+            background-color: #fff;
+            padding: 105px 0;
+        }
+        .vlog .container .card{
+            float: left;
+            width: 25%;
+            box-sizing: border-box;
+            padding: 0 0 0 10px;
+            text-align: center;
+        }
+        .vlog .container .card h1{
+            font-size: 22px;
+            padding: 50px 0 30px 0;
+        }
+        .vlog .container .card p{
+            padding-bottom: 15px;
+        }
+        .vlog .container .card button{
+            padding: 10px 20px;
+            border: none;
+            background-color: #67d4d5;
+            border-radius: 5px;
+        }
+        .vlog .container .card button a{
+            text-decoration: none;
+            font-size: 14px;
+            color: white;
+        }
+        .clear{
+            clear: both;
+        }
+        .fa{
+            font-size: 50px;
+            border: 2px solid #67d4d5;
+            border-radius: 50%;
+            padding: 25px;
+            color: #67d4d5;
+        }
+        /* portfolio */
+        .portfolio{
+            padding: 55px 0;
+            background-color: #f1f1f1;
+        }
+        .portfolio .ig{
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .portfolio .container .img{
+            width: 32%;
+            height: 310px;
+            float: left;
+            background-size: cover;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        .portfolio .container h1{
+            text-align: center;
+            padding-bottom: 65px;
+            font-size: 42px;
+        }
+        .portfolio .container .image1{
+            background-image: url(./image1.png);
+            background-repeat: no-repeat;           
+        }
+        .portfolio .container .image2{
+            background-image: url(./image2.jpg);
+            background-repeat: no-repeat;
+        }
+        .portfolio .container .image3{
+            background-image: url(./image3.jpg);
+            background-repeat: no-repeat;
+        }
+        .portfolio .container .image4{
+            background-image: url(./image4.jpg);
+            background-repeat: no-repeat;
+        }
+        .portfolio .container .image5{
+            background-image: url(./image5.jpg);
+            background-repeat: no-repeat;
+        }
+        .portfolio .container .image6{
+            background-image: url(./image6.jpg);
+            background-repeat: no-repeat;
+        }
+        .portfolio .container button{
+            padding: 20px 45px;
+            margin: auto;
+            border-radius: 5px;
+            border: none;
+            background-color: #67d4d5;
+            margin-top: 40px;
+        }
+        .portfolio .container button a{
+            text-decoration: none;
+            font-size: 24px;
+            color: white;
+        }
+        /* the team */
+        .theme{
+            padding: 45px 0;
+        }
+        .theme .container .team .imag{
+            height: 200px;
+            width: 200px;
+            background-image: url(./ceo.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            margin: auto;
+        }
+        .theme .container .team{
+            float: left;
+            width: 24.5%;
+            box-sizing: border-box;
+            padding-left: 15px;
+            text-align: center;
+        }
+        .theme .container h1{
+            text-align: center;
+            padding-bottom: 50px;
+            font-size: 42px;
+        }
+        /* programe */
+        .programe{
+            background-color: #f1f1f1;
+            padding: 120px 0px;
+        }
+        .programe .container .card{
+            height: auto;
+            width: 370px;
+            background-color: #fff;
+            float: left;
+            box-sizing: border-box;
+            margin-left: 20px;
+        }
+        .programe .container .card h1{
+            text-align: center;
+            padding: 25px 125px;
+            text-transform: capitalize;
+            background-color: #485460;
+            color: white;
+        }
+        .programe .container .card h2{
+            text-align: center;
+            padding: 25px 0px;
+        }
+        .programe .container .card p{
+            text-align: center;
+            padding: 20px 0px;
+            font-size: 14px;
+            border-top: 1px solid black;
+        }
+        .programe .container .card p button{
+            padding: 12px 52px;
+            font-size: 17px;
+            border: none;
+            color: beige;
+            background-color: rgb(143, 245, 245);
+            border-radius: 5px;
+        }
+        .programe .container .card p button:hover{
+            background-color: rgb(213, 250, 110);
+            color: black;
+        }
+        /* text-slide */
+        .t-slide{
+            padding: 65px 0px;
+            text-align: center;
+        }
+        .t-slide .container h1{
+            font-size: 42px;
+            padding: 45px 0px;
+        }
+        .t-slide .container p{
+            box-sizing: border-box;
+            padding: 0px 185px;
+            
+        }
+        .t-slide .container a{
+            padding: 45px 0px;
+            text-decoration: none;
+            font-size: 21px;
+            display: block
+        }
+
+    </style>
+</head>
+<body>
+    <div class="fullweb">
+        <div class="container">
+            <div class="headder">
+                <div class="logo">
+                    <h1>Author</h1>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href=""> Home</a></li>
+                        <li><a href=""> Service</a></li>
+                        <li><a href=""> Portfolio</a></li>
+                        <li><a href=""> Team</a></li>
+                        <li><a href=""> Blog</a></li>
+                        <li><a href=""> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="container banner-text">
+               <div class="text">
+                   <h1>This is a main heading</h1>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste asperiores hic recusandae.</p>
+                   <button>
+                       <a href="#">Learn more</a>
+                   </button>
+               </div>
+            </div>
+        </div>
+        <div class="vlog">
+            <div class="container">
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa fa-rocket" aria-hidden="true"></i>
+                    </div>
+                    <h1>
+                        Custom Design
+                    </h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    </p>
+                    <button>
+                        <a href="#">Read More</a>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                    </div>
+                    <h1>
+                        Web design
+                    </h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    </p>
+                    <button>
+                        <a href="#">Read More</a>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                    </div>
+                    <h1>
+                        Blog page
+                    </h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    </p>
+                    <button>
+                        <a href="#">Read More</a>
+                    </button>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa fa-tablet" aria-hidden="true"></i>
+                    </div>
+                    <h1>
+                        Mobile friendly
+                    </h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    </p>
+                    <button>
+                        <a href="#">Read More</a>
+                    </button>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="portfolio">
+            <div class="container ig">
+                <h1>Portfolio</h1>
+                <div class="img image1">
+                    
+                </div>
+                <div class="img image2">
+
+                </div>
+                <div class="img image3">
+
+                </div>
+                <div class="img image4">
+
+                </div>
+                <div class="img image5">
+
+                </div>
+                <div class="img image6">
+
+                </div>
+                <button>
+                    <a href="#">See all works</a>
+                </button>
+            </div>
+        </div>
+        <div class="theme">
+            <div class="container">
+                <h1>
+                    The team
+                </h1>
+                <div class="team">
+                    <div class="imag">
+                        
+                    </div>
+                    <h1>
+                        adrian thomas
+                    </h1>
+                    <h2>
+                        CEO & Founder
+                    </h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                    </p>
+                </div>
+                <div class="team">
+                    <div class="imag">
+                        
+                    </div>
+                    <h1>
+                        adrian thomas
+                    </h1>
+                    <h2>
+                        CEO & Founder
+                    </h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                    </p>
+                </div>
+                <div class="team">
+                    <div class="imag">
+                        
+                    </div>
+                    <h1>
+                        adrian thomas
+                    </h1>
+                    <h2>
+                        CEO & Founder
+                    </h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                    </p>
+                </div>
+                <div class="team">
+                    <div class="imag">
+                        
+                    </div>
+                    <h1>
+                        adrian thomas
+                    </h1>
+                    <h2>
+                        CEO & Founder
+                    </h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+            <div class="programe">
+                <div class="container">
+                    <div class="card">
+                        <h1>basic</h1>
+                        <h2>$5.01/ Month</h2>
+                        <p>Lorem ipsum </p>
+                        <p>Dolor sit amet, consect</p>
+                        <p>Adipiscing elit</p>
+                        <p>Proin commodo turpis</p>
+                        <p>lacus pulvinarvel </p>
+                        <p>Prnare nisi pretium.</p>
+                        <p><button>Buy now</button></p>
+                    </div>
+                    <div class="card">
+                        <h1>basic</h1>
+                        <h2>$10.01/ Month</h2>
+                        <p>Lorem ipsum </p>
+                        <p>Dolor sit amet, consect</p>
+                        <p>Adipiscing elit</p>
+                        <p>Proin commodo turpis</p>
+                        <p>lacus pulvinarvel </p>
+                        <p>Prnare nisi pretium.</p>
+                        <p><button>Buy now</button></p>
+                    </div>
+                    <div class="card">
+                        <h1>basic</h1>
+                        <h2>$20.01/ Month</h2>
+                        <p>Lorem ipsum </p>
+                        <p>Dolor sit amet, consect</p>
+                        <p>Adipiscing elit</p>
+                        <p>Proin commodo turpis</p>
+                        <p>lacus pulvinarvel </p>
+                        <p>Prnare nisi pretium.</p>
+                        <p><button>Buy now</button></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="t-slide">
+                <div class="container">
+                    <h1>What Clients Say</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 500s, when an unknown printer took a galley of type.
+                    </p>
+                    <a href="#">Jhon Dove</a>
+                </div>
+            </div>
+        
+    </div>
+</body>
+</html>
